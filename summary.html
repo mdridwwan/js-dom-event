@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event summary</title>
+</head>
+
+<body>
+    <input id="input-field" type="text" placeholder="Please Type: 'green' ">
+    <button id="btn" onclick="handleOnClickGreen() " disabled>Click me: Green</button>
+    <script>
+        document.getElementById('input-field').addEventListener('keyup', function(event) {
+            const btn = document.getElementById('btn');
+            if (event.target.value == 'green') {
+                btn.removeAttribute('disabled')
+            } else {
+                btn.setAttribute('disabled', true)
+            }
+
+        })
+
+        function handleOnClickGreen() {
+            document.body.style.backgroundColor = "green ";
+        }
+    </script>
+</body>
+
+</html>

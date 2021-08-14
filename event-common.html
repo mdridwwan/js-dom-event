@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="clicking-method"></p>
+    <input id="input-field" type="text">
+    <button id="update-Name">Update</button>
+    <button onclick="justClickingFunction()">Just Function</button>
+    <button id="eventLisnter">Direct add Event Lister</button>
+
+
+    <script>
+        //F2
+        function justClickingFunction() {
+            const p = document.getElementById('clicking-method');
+            p.innerText = "Amake click korlo kon halairy...?";
+        }
+        document.getElementById('eventLisnter').addEventListener('click', function() {
+                const p = document.getElementById('clicking-method');
+                p.innerText = "Set by add lisnter handle";
+            })
+            //dircet
+        document.getElementById('update-Name').addEventListener('click', function() {
+            const inputField = document.getElementById('input-field');
+            const p = document.getElementById('clicking-method');
+            p.innerText = inputField.value;
+            inputField.value = '';
+        })
+        document.getElementsByClassName
+    </script>
+</body>
+
+</html>
